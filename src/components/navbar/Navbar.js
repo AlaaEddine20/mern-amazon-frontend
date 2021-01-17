@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link to="/checkout" style={{ color: "white", textDecoration: "none" }}>
-          <div className="d-flex align-items-center mx-2 py-1">
+          <div className="d-flex align-items-center mx-3 py-1">
             <ShoppingBasketIcon />
             <StyledLinkBottom className="mx-1">0</StyledLinkBottom>
           </div>
