@@ -1,12 +1,12 @@
 import React from "react";
-// import image1 from "./images/carousel-item1.jpg";
+import image1 from "./images/carousel-item4.jpg";
 import "./Banner.css";
+import StyledImg from "./styles/StyledImg";
 
 const Banner = () => {
   return (
-    <div>
-      {/* <img src={image1} alt="" /> */}
-      <h1>Banner</h1>
+    <div style={{ maxWidth: "1500px", margin: "0 auto " }}>
+      <StyledImg src={image1} alt="" />
     </div>
   );
 };

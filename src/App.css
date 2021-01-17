@@ -10,4 +10,5 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Fira Sans", sans-serif;
+  letter-spacing: 0.05rem;
 }
