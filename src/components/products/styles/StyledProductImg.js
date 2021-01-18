@@ -7,4 +7,5 @@ export default styled.img`
   min-height: 100px;
   object-fit: contain;
   margin: 10px 0;
+  cursor: pointer;
 `;

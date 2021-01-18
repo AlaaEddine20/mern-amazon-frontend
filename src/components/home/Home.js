@@ -4,16 +4,14 @@ import Footer from "../footer/Footer";
 import Banner from "../banner/Banner";
 import Navbar from "../navbar/Navbar";
 import Product from "../products/Product";
-// Pics
-import image from "../products/dummy-pics/dummy-product.jpg";
 // CSS
 import "./Home.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(async () => {
-    await getProducts();
+  useEffect(() => {
+    getProducts();
   }, []);
 
   const getProducts = async () => {
@@ -32,9 +30,8 @@ const Home = () => {
   return (
     <>
       <Navbar />
-
       <Banner />
-      <div className="container-lg col col-10 d-flex">
+      <div className="container-lg d-flex">
         {products.map((product) => (
           <Product
             id={product._id}
