@@ -16,32 +16,35 @@ const Home = () => {
 
   const getProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3055/products", {
+      const response = await fetch("http://localhost:4004/products", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
       const data = await response.json();
-      console.log(data);
       setProducts(data);
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <>
       <Navbar />
       <Banner />
-      <div className="container-lg d-flex">
-        {products.map((product) => (
-          <Product
-            id={product._id}
-            title={product.name}
-            description={product.description}
-            price={product.price}
-            img={product.imageUrl}
-            rating={5}
-          />
-        ))}
+      <div style={{ marginTop: -250 }} className="container-lg">
+        <div className="row d-flex justify-content-center align-items-center">
+          {products.map((product, idx) => (
+            <Product
+              key={idx}
+              id={product.id}
+              title={product.name}
+              description={product.description}
+              price={product.price}
+              img={product.imageUrl}
+              rate={products[0].reviews[0].rate}
+            />
+          ))}
+        </div>
       </div>
 
       <Footer />

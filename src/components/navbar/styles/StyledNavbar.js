@@ -7,5 +7,5 @@ export default styled.div`
   background-color: #131921;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 `;

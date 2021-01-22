@@ -8,7 +8,7 @@ import ProductDetails from "./components/productDetails/ProductDetails";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <>
         <Switch>
           <Route path="/checkout">
             <Navbar />
@@ -25,7 +25,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
+      </>
     </Router>
   );
 }

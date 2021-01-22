@@ -1,32 +1,32 @@
 import React from "react";
 import StyledProductImg from "./styles/StyledProductImg";
-import StyledProductDiv from "./styles/StyledProductDiv";
 import { useHistory } from "react-router-dom";
+import "./Product.css";
 
-const Product = ({ id, title, price, rating, img, description }) => {
+const Product = ({ id, title, price, rate, img, description }) => {
   let history = useHistory();
   return (
-    <StyledProductDiv>
-      <p className="my-3" style={{ fontWeight: 500, fontSize: "15px" }}>
+    <div className="col-3 product mx-4 my-5 text-center">
+      <p className="my-3 mx-auto" style={{ fontWeight: 500, fontSize: "15px" }}>
         {title}
       </p>
       <StyledProductImg
         onClick={() => history.push(`details/${id}`)}
-        className="my-auto"
+        className="my-2"
         src={img}
         alt=""
       />
       <p className="my-2">${price}</p>
-      <p className="my-2">{description}</p>
-      <div className="d-flex my-2">
-        {Array(rating)
+      {/* <p className="my-2">{description}</p> */}
+      <div className="d-flex justify-content-center">
+        {Array(rate)
           .fill()
           .map((_) => (
             <p>⭐</p>
           ))}
       </div>
-      <button className="d-flex my-2">Add to cart</button>
-    </StyledProductDiv>
+      <button className="add-to-cart-btn">Add to cart</button>
+    </div>
   );
 };
 

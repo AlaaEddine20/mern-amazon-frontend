@@ -6,7 +6,6 @@ export default styled.div`
   justify-content: flex-end;
   background-color: white;
   flex-direction: column;
-  column-count: 2;
   max-height: 400px;
   min-width: 100px;
   margin-right: 10px;
