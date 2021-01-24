@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export default styled.img`
-  width: 100%;
-  height: 100%;
+  width: 180px;
+  height: 200px;
   max-height: 200px;
-  min-height: 150px;
+  min-height: 200px;
   object-fit: contain;
-  margin: 10px 0;
+  /* margin: 30px auto; */
   cursor: pointer;
 `;

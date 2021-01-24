@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 // Components
 import Footer from "../footer/Footer";
 import Banner from "../banner/Banner";
@@ -28,6 +27,10 @@ const Home = () => {
         headers: { "Content-Type": "application/json" },
       });
       const data = await response.json();
+      // console.log(
+      //   "REVIEWS: ",
+      //   data.map((product) => product.reviews)
+      // );
       setProducts(data);
       setLoading(false);
     } catch (error) {
@@ -69,7 +72,7 @@ const Home = () => {
                     description={product.description}
                     price={product.price}
                     img={product.imageUrl}
-                    rate={products[0].reviews[0].rate}
+                    reviews={product.reviews.map((rev) => rev.rate)}
                   />
                 ))}
               </div>

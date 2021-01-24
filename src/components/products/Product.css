@@ -9,6 +9,8 @@
 }
 
 .add-to-cart-btn {
+  height: 30px;
+  width: 100px;
   background-color: #f0c14b;
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;

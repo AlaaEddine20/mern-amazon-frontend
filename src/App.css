@@ -8,6 +8,8 @@
 
 body {
   height: 100vh;
+  /* min-height: auto;
+  min-width: 1000px; */
   font-family: "Fira Sans", sans-serif;
   letter-spacing: 0.05rem;
 }
