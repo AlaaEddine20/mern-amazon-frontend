@@ -72,7 +72,7 @@ const Home = () => {
                     description={product.description}
                     price={product.price}
                     img={product.imageUrl}
-                    reviews={product.reviews.map((rev) => rev.rate)}
+                    reviews={product.reviews}
                   />
                 ))}
               </div>
