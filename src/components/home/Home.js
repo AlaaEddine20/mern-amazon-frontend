@@ -22,15 +22,12 @@ const Home = () => {
     setLoading(true);
     setError(false);
     try {
-      const response = await fetch("http://localhost:4004/products", {
+      const response = await fetch("http://localhost:3055/products", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
       const data = await response.json();
-      // console.log(
-      //   "REVIEWS: ",
-      //   data.map((product) => product.reviews)
-      // );
+      console.log(data);
       setProducts(data);
       setLoading(false);
     } catch (error) {
